@@ -1,0 +1,16 @@
+{
+  "metadata": {
+    "/dir": { "type": "dir" },
+    "/old": { "type": "file" }
+  },
+  "appliedTxns": [],
+  "records": [
+    { "seq": 1, "type": "create", "txn": "t1", "path": "/dir/a" },
+    { "seq": 2, "type": "commit", "txn": "t1" },
+    { "seq": 3, "type": "fsync" },
+    { "seq": 4, "type": "rename", "txn": "t2", "from": "/old", "to": "/dir/moved" },
+    { "seq": 5, "type": "commit", "txn": "t2" },
+    { "seq": 6, "type": "fsync" },
+    { "seq": 7, "type": "unlink", "txn": "t3", "path": "/dir/a" }
+  ]
+}

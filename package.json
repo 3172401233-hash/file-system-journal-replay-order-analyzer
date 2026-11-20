@@ -1,0 +1,18 @@
+{
+  "name": "file-system-journal-replay-order-analyzer",
+  "version": "1.0.0",
+  "description": "抽象文件系统日志重放分析器：基于 fsync 边界、提交标记和目录依赖计算可安全重放的最长前缀",
+  "type": "module",
+  "main": "src/replay-analyzer.js",
+  "bin": {
+    "journal-replay-analyzer": "src/cli.js"
+  },
+  "engines": {
+    "node": ">=24.16.0"
+  },
+  "scripts": {
+    "test": "node --test",
+    "analyze": "node src/cli.js"
+  },
+  "license": "MIT"
+}
